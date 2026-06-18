@@ -8,7 +8,7 @@ import time
 from .config import setting
 
 Sql_Database_URL = f'postgresql://{setting.database_username}:{setting.database_password}@{setting.database_hostname}:{setting.database_port}/{setting.database_name}'
-
+# print(Sql_Database_URL)
 engine = create_engine(Sql_Database_URL)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush= False, bind=engine)

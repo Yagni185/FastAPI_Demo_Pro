@@ -74,6 +74,11 @@ def root(db: Session = Depends(get_db)):
     person = db.query(models.User2).all()
     return {"data" : person}
 
+@app_2.get('/user11')
+def root(db : Session = Depends(get_db)):
+    person = db.query(models.User1).all()
+    return {"data" : person}
+
 
 #user authentication
 
